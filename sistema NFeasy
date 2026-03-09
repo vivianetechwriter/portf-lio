@@ -1,0 +1,56 @@
+# Sistema de Emissão de Notas Fiscais - NF-Easy
+
+Documentação técnica e de usuário do **Sistema de Emissão de Notas Fiscais- NF-Easy**.
+
+Este sistema permite a geração, consulta e gerenciamento de notas fiscais eletrônicas de forma automatizada.
+
+---
+
+# Table of Contents
+
+- [Visão geral](#visão-geral)
+- [Arquitetura do processo](#arquitetura-do-processo)
+- [Fluxo de emissão de nota fiscal](#fluxo-de-emissão-de-nota-fiscal)
+- [Emitir uma nota fiscal](#emitir-uma-nota-fiscal)
+- [Consultar notas fiscais](#consultar-notas-fiscais)
+- [API de emissão de nota fiscal](#api-de-emissão-de-nota-fiscal)
+- [Exemplo de requisição](#exemplo-de-requisição)
+- [Exemplo de resposta](#exemplo-de-resposta)
+- [Problemas comuns](#problemas-comuns)
+
+---
+
+# Visão geral
+
+O Sistema de Emissão de Notas Fiscais foi desenvolvido para automatizar o processo de criação e gestão de documentos fiscais.
+
+Principais funcionalidades:
+
+- emissão de notas fiscais
+- consulta de notas emitidas
+- cancelamento de notas
+- integração com sistemas externos via API
+
+---
+
+# Arquitetura do processo
+
+O sistema segue o seguinte fluxo de processamento:
+
+1. Usuário informa dados da nota
+2. Sistema valida dados fiscais
+3. Nota fiscal é gerada
+4. Documento é armazenado no sistema
+5. Nota fica disponível para consulta
+
+---
+
+# Fluxo de emissão de nota fiscal
+
+```mermaid
+graph TD
+A[Usuário inicia emissão] --> B[Preenche dados do cliente]
+B --> C[Adiciona produtos ou serviços]
+C --> D[Sistema valida dados]
+D --> E[Nota fiscal gerada]
+E --> F[Nota armazenada no sistema]
